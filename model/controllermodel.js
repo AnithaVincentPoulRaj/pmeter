@@ -1,0 +1,13 @@
+exports.GET_CONTROLLER_LIST_SQL = "SELECT COUNT(BIN_ID) as recCount FROM bin WHERE BIN_MACADDRESS = ?"  // Not Need
+
+var createControllerSql  = "INSERT INTO product SET ? ";
+exports.SET_CONTROLLER_SQL = createControllerSql;
+
+exports.UPDATE_USER_CONTROLLER_DETAILS = "UPDATE product SET PRODUCT_DATA = ? WHERE MACADDRESS = ? AND PRODUCT_TYPE_ID = ?";
+
+
+exports.GET_PRODUCT_OWNER_ID = "SELECT USER_ID as userID FROM product WHERE MACADDRESS = ? AND PRODUCT_TYPE_ID = ?"
+
+exports.SET_CONTROLLER_SQL_DETAILS = "INSERT INTO details SET ?";
+
+exports.GET_USER_CON_REPORT_SQL = "SELECT SNO as id,STATUS as status, CREATE_TS as date FROM details ORDER BY ID DESC LIMIT 50"; 
