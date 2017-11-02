@@ -1,5 +1,4 @@
 var bunyan = require('bunyan');
-
 exports.getLogger = function (appName) {
   var logger = null;
   if (!logger || null === logger) {
